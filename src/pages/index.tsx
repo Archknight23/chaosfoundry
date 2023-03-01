@@ -10,13 +10,8 @@ Deliverable Date: TBD - in progress*/
  */
 
 import Head from 'next/head';
-import { MantineProvider, ColorSchemeProvider, ColorScheme, ActionIcon } from '@mantine/core';
-import { useState } from 'react';
+import Base from '../components/AppShell';
 export default function Home() {
-  
-    const [colorScheme, setColorScheme] = useState<ColorScheme>('dark');
-    const toggleColorScheme = (value?: ColorScheme) => setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-    const dark = colorScheme === 'dark';
   
   return(
     <>
@@ -24,18 +19,7 @@ export default function Home() {
       <title>Welcome to the Chaos Foundry</title>
       <meta name="description" content="The Chaos Foundry is the Techonological and Artistic Hub of the Chaos Gumi." key="metadescription" />
     </Head>
-    <div>
-      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider theme = {{colorScheme: colorScheme}} withGlobalStyles withNormalizeCSS>
-      <h1>This is the Sample Home</h1>
-      </MantineProvider>
-      </ColorSchemeProvider>
-      <ActionIcon variant ="outline" color={dark ? 'yellow' : 'blue'}
-      onClick={() => toggleColorScheme()}
-      title="Toggle darkmode">
-        {dark ? '☀️' : '🌙'}
-      </ActionIcon>
-    </div>
+    <Base /> 
     </>
   )
 
