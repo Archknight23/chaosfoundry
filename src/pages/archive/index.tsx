@@ -1,4 +1,4 @@
-import Base from "@/components/AppShell";
+import Base from "@/components/appshell";
 
 export default function Archive() {
   return(

@@ -15,19 +15,19 @@ export default function Base() {
          asideOffSetBreakpoint="md"
          navbar = {
             <Navbar p="md" hiddenBreakpoint={!opened} width={{sm: 200, lg:300}}>
-                <Anchor href= './index'> Home</Anchor>
-                <Anchor href= './archive/'>The Archive </Anchor>
+                <Anchor href= './'> Home</Anchor>
+                <Anchor href= '././archive'>The Archive </Anchor>
             </Navbar>
          }
          aside = {
-            <MediaQuery breakpoint="md" styles={{ display: 'none'}}>
+            <MediaQuery breakpoint="sm" styles={{ display: 'none'}}>
                 <Aside p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300}}>
                     <Text> Testing if this sidebar works</Text>
                 </Aside>
             </MediaQuery>
          }
          footer = {
-            <Footer height={60} p="md">
+            <Footer height={60} p="sm">
                 <Text>Built partially live on <Anchor href="www.twitch.tv/chaosfoundry">Our Twitch Channel</Anchor> 2023</Text>
             </Footer>
          }
@@ -38,7 +38,9 @@ export default function Base() {
                         <Burger opened={opened} onClick={ () => setOpened((o) => !o)}
                         size="sm" color={theme.colors.gray[6]} mr="xl"  />
                     </MediaQuery>
-                <Text>The Chaos Foundry Directive Interface</Text>
+                <Text 
+                fz="lg"
+                ta="left">The Chaos Foundry Directive Interface</Text>
                 </div>
 
             </Header>

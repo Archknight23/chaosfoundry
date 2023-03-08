@@ -10,7 +10,7 @@ Deliverable Date: TBD - in progress*/
  */
 
 import Head from 'next/head';
-import Base from '../components/AppShell';
+import Base from '../components/appshell';
 export default function Home() {
   
   return(
