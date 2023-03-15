@@ -19,7 +19,7 @@ export default function Home() {
       <title>Welcome to the Chaos Foundry</title>
       <meta name="description" content="The Chaos Foundry is the Techonological and Artistic Hub of the Chaos Gumi." key="metadescription" />
     </Head>
-    <Base /> 
+    <Base />
     </>
   )
 

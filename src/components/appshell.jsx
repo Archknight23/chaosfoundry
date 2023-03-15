@@ -11,23 +11,23 @@ export default function Base() {
                 background: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.purple[0],
             },
          }}
-         navbarOffsetBreakpoint="md"
-         asideOffSetBreakpoint="md"
+         navbarOffsetBreakpoint="xs"
+         asideOffSetBreakpoint="xs"
          navbar = {
             <Navbar p="md" hiddenBreakpoint={!opened} width={{sm: 200, lg:300}}>
-                <Anchor href= './'> Home</Anchor>
-                <Anchor href= '././archive'>The Archive </Anchor>
+                <Anchor href= '/'> Home</Anchor>
+                <Anchor href= '/archive/[postSlug].js'>The Archive </Anchor>
             </Navbar>
          }
          aside = {
-            <MediaQuery breakpoint="sm" styles={{ display: 'none'}}>
+            <MediaQuery breakpoint="xs" styles={{ display: 'none'}}>
                 <Aside p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300}}>
                     <Text> Testing if this sidebar works</Text>
                 </Aside>
             </MediaQuery>
          }
          footer = {
-            <Footer height={60} p="sm">
+            <Footer height={60} p="xs">
                 <Text>Built partially live on <Anchor href="www.twitch.tv/chaosfoundry">Our Twitch Channel</Anchor> 2023</Text>
             </Footer>
          }
@@ -39,14 +39,19 @@ export default function Base() {
                         size="sm" color={theme.colors.gray[6]} mr="xl"  />
                     </MediaQuery>
                 <Text 
-                fz="lg"
-                ta="left">The Chaos Foundry Directive Interface</Text>
+                fz="lg" 
+                ta="center">The Chaos Foundry Directive Interface</Text>
                 </div>
 
             </Header>
          }
         >
-                <Text>If you see this text, shit is not broken. </Text>
+            <Text> 
+                <h1> Does this work? </h1>
+                <p>Let's see if this works. </p>
+
+            </Text>
+                
         </AppShell>
     );
 }
